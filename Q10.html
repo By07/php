@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Animation Example</title>
+  <style>
+    #animated-div {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      position: relative;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // when the animate button is clicked
+      $('#animate-button').click(function() {
+        // animate the div's position
+        $('#animated-div').animate({
+          left: '250px',
+          opacity: '0.5',
+          height: '150px',
+          width: '150px'
+        }, 1000, function() {
+          // when the animation is complete, animate back to original position
+          $('#animated-div').animate({
+            left: '0px',
+            opacity: '1',
+            height: '100px',
+            width: '100px'
+          }, 1000);
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <button id="animate-button">Animate</button>
+  <div id="animated-div"></div>
+</body>
+</html>
+

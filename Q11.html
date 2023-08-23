@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Dynamic Element Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .dynamic-element {
+      display: block;
+    }
+  </style>
+  <script>
+    $(document).ready(function() {
+      // when the add element button is clicked
+      $('#add-element-button').click(function() {
+        // prompt the user for the element type they want to add
+        var elementType = prompt("Enter the type of element you want to add (e.g. div, p, h1):");
+        // create a new element
+        var newElement = $('<' + elementType + '></' + elementType + '>');
+        // add the type of element to the new element's text content
+        newElement.text(elementType);
+        // add the dynamic-element class to the new element
+        newElement.addClass('dynamic-element');
+        // append the new element to the container
+        $('#element-container').append(newElement);
+      });
+    });
+  </script>
+</head>
+<body>
+  <button id="add-element-button">Add Element</button>
+  <div id="element-container"></div>
+</body>
+</html>

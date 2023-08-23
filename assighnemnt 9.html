@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Details</title>
+</head>
+<body>
+	<h1>Enter Student Details</h1>
+	<form method="post" action="assignment_9.php">
+		<label for="rollno">Roll Number:</label>
+		<input type="text" id="rollno" name="rollno" required><br><br>
+
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required><br><br>
+
+		<label for="dept">Department:</label>
+		<input type="text" id="dept" name="dept" required><br><br>
+
+		<label for="year">Passing Year:</label>
+		<input type="text" id="year" name="year" required><br><br>
+
+		<label for="grades">Class Grades:</label><br>
+		<input type="radio" id="first" name="grades" value="First Class" required>
+		<label for="first">First Class</label><br>
+		<input type="radio" id="second" name="grades" value="Second Class">
+		<label for="second">Second Class</label><br>
+		<input type="radio" id="pass" name="grades" value="Pass">
+		<label for="pass">Pass</label><br><br>
+
+		<input type="submit" name="btnInsert" value="Insert">
+		<input type="submit" name="btnDisplay" value="Display">
+		<br><br>
+
+		<label for="search-year">Search by Passing Year:</label>
+		<select name="search-year" id="search-year">
+			<option value="">--Select Year--</option>
+			<option value="2020">2020</option>
+			<option value="2021">2021</option>
+			<option value="2022">2022</option>
+			<option value="2023">2023</option>
+		</select>
+
+		<input type="submit" name="btnSearch" value="Search">
+	</form>
+</body>
+</html>
